@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Campeões LoL</title>
+    <link rel="stylesheet" th:href="@{/css/root.css}" />
+    <link rel="stylesheet" th:href="@{/css/menu.css}" />
+    <link rel="stylesheet" th:href="@{/css/table.css}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Início</a></li>
+          <li><a href="/champs/insert">Cadastrar Campeão</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="box">
+      <table>
+        <thead>
+          <th scope="col">#</th>
+          <th scope="col">Nome do campeão</th>
+          <th scope="col">Habilidades</th>
+          <th scope="col">Build</th>
+          <th scope="col">Counters</th>
+        </thead>
+        <tbody>
+          <tr th:each="champs : ${champs}">
+            <td th:text="${champs.id}"></td>
+            <td th:text="${champs.nome}"></td>
+            <td th:text="${champs.habilidades}"></td>
+            <td th:text="${champs.build}"></td>
+            <td th:text="${champs.counters}"></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+header {
+  width: 100vw;
+  margin: 0;
+  background-color:black;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+ul > li {
+  margin-right: 10rem;
+  text-align: center;
+}
+
+ul > li > a {
+  text-decoration: none;
+  color: white;
+}
+img{
+	width: 100vw;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campeões do LoL</title>
+  	<link rel="stylesheet" th:href="@{/css/menu.css}">
+	<link rel="stylesheet" th:href="@{/css/root.css}">  
+	 <link rel="stylesheet" th:href="@{/css/form.css}"/>  
+  </head>
+  <body>
+		<header>
+		</header>
+    <main>
+      <form
+        action="/"
+        th:action="@{/champs/insert}"
+        method="post"
+        th:object="${champs}"
+      >
+        <label for="txtNome">Nome</label>
+        <input type="text" th:field="*{nome}" required />
+        <label for="txtHabilidades">Habilidades</label>
+        <input type="text" th:field="*{habilidades}" required />
+        <label for="txtBuild">Build</label>
+        <input type="text" th:field="*{build}" required />
+        <label for="txtCounters">Counters</label>
+        <input type="text" th:field="*{counters}" required />
+        <button type="submit">Salvar Campeão</button>
+	
+	</body>
+</html>
